@@ -34,3 +34,24 @@ df[['Class']].head(8)
 
 df["Class"].mean()
 df.to_csv("dataset_part_2.csv", index=False)
+
+
+
+
+#How many launches went to geosynchronous orbit? 
+a = df[df['Orbit']=='GTO']
+a['Flights'].sum()
+# sum 38 geosynchronous orbit fly GTO
+a = df[df['Orbit']=='GEO']
+a['Flights'].sum()
+# sum 2 circular geosynchronous orbit fly GEO
+
+
+#How many mission outcome was successfully landed to a drone ship? 
+#True asds
+a = df[df['Outcome']=='True ASDS']
+a['Flights'].sum()
+# 86 TRIED
+a = df[df['Outcome']=='True ASDS']
+len(a)
+#41
